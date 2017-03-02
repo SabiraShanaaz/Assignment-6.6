@@ -1,0 +1,47 @@
+1.Explain the difference between FIFO and Capacity scheduler
+
+      -The difference between FIFo and capacity scheduler is:
+
+          * In FIFO scheduling the jobs are taken from the work queue.The jobs are taken in the order of oldest job first.
+                  THe FIFO scheduling doen not deals with priority or the size of the job.
+
+          * In FIFO if the old job is long the short jobs get stuck behind the long ones
+
+          * In FIFO there is poor utilization of the job queue and it has costly data replication.
+
+          * Whereas in capacity scheduling several queues are created, with each having a number of map and reduce tasks.
+
+          * In capacity scheduling each queue is assigned a capacity.
+                  These capacity of individual queue is added together to find the overall capacity of the cluster.
+
+          * Unlike FIFO ,here the shortest job are assigned first followed by the longest one.
+
+
+
+2.What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x
+
+       -The limitations of hadoop 1.x are:
+
+          * The major limitation of hadoop 1.x is that it supports only map reduce based batch and data processing.
+
+          * In hadoop 1.x only one namenode is used.
+               If the name node fails the entire cluster fails and this is called Single POint of failure(SPOF) in hadoop 1.x.
+
+          * Hadoop 1.x is not suitable for real time data processing.
+
+          * Hadoop 1.x does not support horizontal scalability.
+
+       -Hadoop 2.x overcomes the limitation of hadoop 1.x by:
+
+          * Hadoop 2.x supports horizontal scalability.
+
+          * It decouples the mapreduce components responsibility into different components.
+
+          * Haddop 2.x uses new YARN component.
+
+          * It supports multiple namenode and multiple name space.
+
+          * It provides high availability and high scalability. 
+
+          * Hadoop 2.x has resource manager component, node manager component 
+                 and application master component which makes it more useful.  
